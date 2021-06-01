@@ -3,13 +3,11 @@ const fileupload = require("express-fileupload");
 const cors = require("cors");
 
 
-const app = express(),
-      bodyParser = require("body-parser");
-      port = 8000;
+const app = express();
 app.use(cors());
 app.use(fileupload());
 app.use(express.static("files"));
-app.use(bodyParser.json());
+
 app.post("/upload", (req, res) => {
   const newpath = __dirname + "/uploaded-files/";
   //const newpath = "F:/Demo/";
@@ -298,9 +296,7 @@ app.get("/download/", (req, res) => {
   //   }
   // });
 });
-app.get('/', (req,res) => {
-  res.sendFile(path.join(__dirname, './index.html'));
-});
+
 app.listen(8000, () => {
   console.log("Server running successfully on 8000");
 });
