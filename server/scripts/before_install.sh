@@ -6,7 +6,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 nvm install node
 
 #create our working directory if it doesnt exist
-DIR="/home/ec2-user/converter-app"
+DIR="/home/ec2-user/server"
 if [ -d "$DIR" ]; then
   echo "${DIR} exists"
 else

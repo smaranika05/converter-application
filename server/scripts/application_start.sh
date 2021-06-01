@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #give permission for everything in the converter-app directory
-sudo chmod -R 777 /home/ec2-user/converter-app
+sudo chmod -R 777 /home/ec2-user/server
 
 #navigate into our working directory where we have all our github files
 cd /home/ec2-user/express-app
